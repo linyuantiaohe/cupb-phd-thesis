@@ -21,7 +21,7 @@
 %---------------------------------------------------------------------------%
 %->> Document settings
 %---------------------------------------------------------------------------%
-\usepackage[authoryear,myhdr,list]{Style/artratex}% document settings
+\usepackage[super,myhdr,list]{Style/artratex}% document settings
 %- usage: \usepackage[option1,option2,...,optionN]{artratex}
 %- Multiple optional arguments:
 %- [bibtex|biber]% set bibliography processor and package
@@ -60,10 +60,13 @@
 }
 %\input{Tex/Prematter}% list of symbols, preface content
 %-
-%-> Mainmatter
+%-> Mainmatter and bibliography
 %-
 \mainmatter% initialize the environment
 \input{Tex/Mainmatter}% main content
+
+\intotoc{\bibname}% add link to contents table and bookmark
+\bibliography{Biblio/ref}% bibliography
 %-
 %-> Appendix
 %-
@@ -71,11 +74,9 @@
 \appendix% initialize the environment
 \input{Tex/Appendix}% appendix content
 %-
-%-> Backmatter: bibliography, glossary, index
+%-> Backmatter: glossary, index
 %-
 \backmatter% initialize the environment
-\intotoc{\bibname}% add link to contents table and bookmark
-\bibliography{Biblio/ref}% bibliography
 \input{Tex/Backmatter}% other information
 \end{document}
 %---------------------------------------------------------------------------%
