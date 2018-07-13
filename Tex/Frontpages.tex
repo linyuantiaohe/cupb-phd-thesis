@@ -1,0 +1,111 @@
+%---------------------------------------------------------------------------%
+%->> 封面信息及生成
+%---------------------------------------------------------------------------%
+%-
+%-> 中文封面信息
+%-
+\title{中文题目可能会特别长比如有这么这么这么长}%中文题目，下边需要手动分行
+\titleone{~中文题目可能会特别长}% 论文中文题目第一行
+\titletwo{~比如有这么这么这么长}% 论文中文题目第二行
+\major{~管理科学与工程}%学科专业
+\researchfield{~能源战略与政策系统分析}%研究方向
+\author{~你的名字}% 论文作者
+\advisor{~你导师的名字~教授}% 指导教师：姓名 专业技术职务
+
+\chinesedate{二〇一九~年~五~月}% word模板上是5月
+%-
+%-> 英文封面信息
+%-
+\englishtitle{Chinese title could be very very very very very long}% 论文英文题目
+\englishauthor{Your name}% 论文作者
+\englishadvisor{Prof. Your supervisior}% 指导教师
+\englishdegreetype{Management}% 学位类别：参考教务系统和word模板
+\englishmajor{Management Science and Engineering}% 二级学科专业名称：参考教务系统和word模板
+\englishdate{May, 2019}% 毕业日期：模板上是May
+%-
+%-> 生成封面
+%-
+\maketitle% 生成中文封面
+\makeenglishtitle% 生成英文封面
+%-
+%-> 作者声明
+%-
+\makedeclaration% 生成声明页
+%-
+%-> 中文摘要
+%-
+\chapter{摘\qquad 要}\chaptermark{摘\qquad 要}% 下边写中文摘要
+
+本文给出了中国石油大学（北京）博士学位论文的写作规范和排版格式要求。文中格式可作为编排博士学位论文的格式模板，供博士研究生参考使用。
+摘要、Abstract、目录等前置部分用罗马数字单独编排页码，宋体，五号，居中。从正文开始，页码一律用阿拉伯数字连续编排，引言首页作为第1页。封一、封二和封底不编排页码。页码必须标注在每页页脚位置，Arial字体，五号，居中。
+正文段落首行缩进2字；除章节标题、中文图名、中文表名及表内文字等有特殊说明之外，正文的中文汉字为宋体，英文字符和阿拉伯数字为Times New Roman，字号小四。行距：多倍行距 1.25，间距：段前、段后均为0行，选择网格对齐选项。
+摘要部分说明：
+“摘要”是摘要部分的标题，不可省略。
+标题“摘要”选用模板中的样式所定义的“标题1”，居中；或者手动设置成字体：黑体，居中，字号：小三，1.5倍行距，段前为0，段后11磅。
+论文摘要是学位论文的缩影，文字要简练、明确。内容要包括目的、方法、结果和结论。单位制一律换算成国际标准计量单位制，除特别情况外，数字一律用阿拉伯数码。文中不允许出现插图。重要的表格可以写入。
+摘要正文选用模板中的样式所定义的“正文”，每段落首行缩进2个汉字；或者手动设置成每段落首行缩进2个汉字，字体：中文宋体，英文和阿拉伯数字Times New Roman，字号：小四，行距：多倍行距 1.25，间距：段前、段后均为0行，选择网格对齐选项。
+摘要正文后，列出3-5个关键词。“关键词：”是关键词部分的引导，不可省略。关键词请尽量用《汉语主题词表》等词表提供的规范词。
+关键词与摘要之间空一行。“关键词”黑体，小四，加粗；关键词词间用分号间隔，末尾不加标点，3-5个，宋体，小四。
+中、英文摘要一般为800～1000字。
+
+\keywords{写作规范；排版格式；博士学位论文}% 中文关键词
+%-
+%-> 英文摘要
+%-
+{
+    \ctexset {
+        chapter = {
+            format = \linespread{1.25}\zihao{-3}\bfseries\centering,
+            number = \arabic{chapter},
+            aftername = \quad,
+            beforeskip = {0pt},
+            afterskip = {0pt},
+            pagestyle = plain,
+        }
+    }
+    \chapter*{The Format Criterion of Doctoral Dissertation}%在个括号里输入英文标题
+    \chaptermark{ABSTRACT}
+    {
+        \linespread{1.25}
+        {\ }\par
+    }
+    \ctexset {
+        chapter = {
+            break={\par\relax},
+            format = \linespread{1.5}\zihao{-3}\bfseries\centering,
+            number = \arabic{chapter},
+            aftername = \quad,
+            beforeskip = {0pt},
+            afterskip = {11pt},
+            pagestyle = plain,
+        }
+    }
+    \chapter{ABSTRACT}
+}% 下边写英文摘要
+
+内容应与“中文摘要”对应。使用第三人称，最好采用现在时态编写。
+“ABSTRACT”不可省略。标题“ABSTRACT”选用模板中的样式所定义的“标题1”，居中；或者手动设置成字体：Times New Roman，粗体，居中，字号：小三，多倍行距1.5倍行距，段前为0，段后11磅。
+标题“ABSTRACT”上方是论文的英文题目，字体：Times New Roman，居中，字号：小三，行距：多倍行距 1.25，间距：段前、段后均为0行，选择网格对齐选项。
+Abstract正文选用设置成每段落首行缩进2字，字体：Times New Roman，字号：小四，行距：多倍行距 1.25，间距：段前、段后均为0行，选择网格对齐选项。
+Key words与Abstract之间空一行，“Key words”加粗。Key words与中文“关键词”一致。词间用分号间隔，末尾不加标点，3-5个，Times New Roman，小四。
+
+\englishkeywords{Write Criterion; Typeset Format; Template}% 英文关键词
+
+%-> 创新点
+%-
+\chapter{创\quad 新\quad 点}\chaptermark{创\quad 新\quad 点}% 创新点标题
+
+
+\begin{enumerate}
+
+\item 说是
+
+\item 最多
+
+\item 有四
+
+\item 条创新点，一共1000字以内
+
+\end{enumerate}
+%创新点
+%---------------------------------------------------------------------------%
